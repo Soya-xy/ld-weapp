@@ -1,5 +1,7 @@
 <script setup lang="ts">
-onLaunch(() => { })
+onLaunch(() => {
+  initNats()
+})
 </script>
 
 <style lang="scss">

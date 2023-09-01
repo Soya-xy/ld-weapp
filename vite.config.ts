@@ -23,17 +23,18 @@ export default defineConfig({
       directoryAsNamespace: true,
       resolvers: [NutResolver()],
     }),
-    Uni(),
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({
       imports: ['vue', '@vueuse/core', 'uni-app'],
       dts: 'src/auto-imports.d.ts',
-      dirs: ['src/composables', 'src/stores', 'src/utils'],
+      dirs: ['src/composables', 'src/utils'],
       vueTemplate: true,
     }),
     // https://github.com/antfu/unocss
     // see unocss.config.ts for config
     UnoCSS(),
+    Uni(),
+
   ],
   css: {
     preprocessorOptions: {
