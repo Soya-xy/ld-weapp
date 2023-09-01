@@ -1,0 +1,15 @@
+{
+  "prettier.enable": false,
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "vite.config.*": "pages.config.*, manifest.config.*, uno.config.*, volar.config.*, *.env, .env.*"
+  },
+  "cSpell.words": [
+    "dcloudio",
+    "vueuse"
+  ]
+}
