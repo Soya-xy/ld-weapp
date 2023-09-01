@@ -3,7 +3,7 @@ import Uni from '@dcloudio/vite-plugin-uni'
 import UniHelperManifest from '@uni-helper/vite-plugin-uni-manifest'
 import UniHelperPages from '@uni-helper/vite-plugin-uni-pages'
 import UniHelperLayouts from '@uni-helper/vite-plugin-uni-layouts'
-import UniHelperComponents from '@uni-helper/vite-plugin-uni-components'
+import UniHelperComponents, { kebabCase } from '@uni-helper/vite-plugin-uni-components'
 import AutoImport from 'unplugin-auto-import/vite'
 import UnoCSS from 'unocss/vite'
 
@@ -20,7 +20,20 @@ export default defineConfig({
     UniHelperComponents({
       dts: 'src/components.d.ts',
       directoryAsNamespace: true,
-      resolvers: [NutResolver()],
+      resolvers: [
+        (function () {
+          return {
+            type: 'component',
+            resolve: (name: string) => {
+              if (name.match(/^Tm[A-Z]/)) {
+                const partialName = kebabCase(name)
+
+                return { name, from: `@/tmui/components/${partialName}/${partialName}.vue` }
+              }
+            },
+          }
+        })(),
+      ],
     }),
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({

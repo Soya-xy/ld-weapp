@@ -8,6 +8,10 @@
       "path": "pages/hi",
       "type": "page",
       "layout": "home"
+    },
+    {
+      "path": "pages/item",
+      "type": "page"
     }
   ],
   "globalStyle": {

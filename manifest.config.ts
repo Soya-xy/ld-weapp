@@ -19,7 +19,9 @@ export default defineManifestConfig({
       delay: 0,
     },
     /* 模块配置 */
-    modules: {},
+    modules: {
+      Canvas: 'nvue canvas',
+    },
     /* 应用发布信息 */
     distribute: {
       /* android打包配置 */

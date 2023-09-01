@@ -1,8 +1,6 @@
 <script setup lang="ts">
 const name = ref('')
 function go() {
-  console.log('🚀 ~ file: InputEntry.vue:5 ~ go ~ name:', name)
-
   if (name.value) {
     uni.navigateTo({
       url: `/pages/hi?name=${name.value}`,
@@ -29,7 +27,7 @@ function go() {
         placeholder="What's your name?"
         type="text"
         autocomplete="off"
-        mr-0 w-full
+        w-full mr-0
       >
     </view>
     <view>
@@ -38,15 +36,16 @@ function go() {
 
         m="t-3 auto"
         m-auto w-120rpx rounded bg-teal-600 px-4 py-1 text-sm text-white
-        hover-calss="bg-teal-700"
+        hover-class="bg-teal-700"
+        class="ld-bg-red-500"
         @click="go"
       >
         GO
       </button>
       <view mt2>
-        <nut-button type="primary">
+        <tm-button type="primary">
           测试自动引入
-        </nut-button>
+        </tm-button>
       </view>
     </view>
   </view>

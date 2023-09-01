@@ -21,13 +21,13 @@ const transformers: SourceCodeTransformer[] = []
 const darkMode = isH5 ? 'class' : 'media'
 
 if (isMp) {
-  presets.push(presetApplet({ dark: darkMode }))
+  presets.push(presetApplet({ dark: darkMode, prefix: 'ld-' }))
   presets.push(presetRemRpx())
   transformers.push(transformerAttributify({ ignoreAttributes: ['block', 'fixed'] }))
   transformers.push(transformerApplet())
 }
 else {
-  presets.push(presetUno({ dark: darkMode }))
+  presets.push(presetUno({ dark: darkMode, prefix: 'ld-' }))
   presets.push(presetAttributify())
   presets.push(presetRemRpx({ mode: 'rpx2rem' }))
 }
