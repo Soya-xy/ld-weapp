@@ -9,6 +9,6 @@
   "ignorePatterns": [
     "dist",
     "node_modules",
-    "tmui"
+    "src/tmui"
   ]
 }
