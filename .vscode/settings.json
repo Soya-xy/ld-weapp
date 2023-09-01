@@ -8,8 +8,12 @@
   "explorer.fileNesting.patterns": {
     "vite.config.*": "pages.config.*, manifest.config.*, uno.config.*, volar.config.*, *.env, .env.*"
   },
+  "files.associations": {
+    "*.wxml": "html"
+  },
   "cSpell.words": [
     "dcloudio",
     "vueuse"
-  ]
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

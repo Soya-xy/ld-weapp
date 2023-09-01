@@ -6,6 +6,7 @@ import UniHelperLayouts from '@uni-helper/vite-plugin-uni-layouts'
 import UniHelperComponents from '@uni-helper/vite-plugin-uni-components'
 import AutoImport from 'unplugin-auto-import/vite'
 import UnoCSS from 'unocss/vite'
+import { NutResolver } from 'nutui-uniapp'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -20,6 +21,7 @@ export default defineConfig({
     UniHelperComponents({
       dts: 'src/components.d.ts',
       directoryAsNamespace: true,
+      resolvers: [NutResolver()],
     }),
     Uni(),
     // https://github.com/antfu/unplugin-auto-import
@@ -33,4 +35,18 @@ export default defineConfig({
     // see unocss.config.ts for config
     UnoCSS(),
   ],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: '@import "nutui-uniapp/styles/variables.scss";',
+      },
+    },
+  },
+  build: {
+    target: 'es6',
+    cssTarget: 'chrome61',
+  },
+  optimizeDeps: {
+    exclude: ['vue-demi'],
+  },
 })
