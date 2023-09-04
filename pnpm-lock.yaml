@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
@@ -59,6 +59,9 @@ dependencies:
   core-js:
     specifier: ^3.32.1
     version: 3.32.1
+  nutui-uniapp:
+    specifier: ^1.0.0
+    version: 1.0.0(vue@3.3.4)
   pinia:
     specifier: 2.0.33
     version: 2.0.33(typescript@5.2.2)(vue@3.3.4)
@@ -7939,6 +7942,14 @@ packages:
     dependencies:
       boolbase: 1.0.0
     dev: true
+
+  /nutui-uniapp@1.0.0(vue@3.3.4):
+    resolution: {integrity: sha512-bndsHeJ35wbKB//HQF5SOMQv58U4MzSVEU7gnRT+9WZ038PG0tXI7UZkY7CH/HCLw142hDxYJzz5mJPwwD+N/w==}
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      vue: 3.3.4
+    dev: false
 
   /nwsapi@2.2.7:
     resolution: {integrity: sha512-ub5E4+FBPKwAZx0UwIQOjYWGHTEq5sPqHQNRN8Z9e4A7u3Tj1weLJsL59yH9vmvqEtBHaOmT6cYQKIZOxp35FQ==}

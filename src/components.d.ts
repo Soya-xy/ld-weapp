@@ -11,6 +11,6 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Counter: typeof import('./components/Counter.vue')['default']
     InputEntry: typeof import('./components/InputEntry.vue')['default']
-    TmButton: typeof import('@/tmui/components/tm-button/tm-button.vue')['default']
+    NutButton: typeof import('nutui-uniapp/components/button/button.vue')['default']
   }
 }

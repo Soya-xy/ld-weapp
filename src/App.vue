@@ -4,11 +4,6 @@ onLaunch(() => {
 })
 </script>
 
-<style>
-/* #ifdef APP-NVUE */
-@import './tmui/scss/nvue.css';
-/* #endif */
-/* #ifndef APP-NVUE */
-@import './tmui/scss/noNvue.css';
-/* #endif */
+<style lang="scss">
+@import 'nutui-uniapp/styles/index';
 </style>
