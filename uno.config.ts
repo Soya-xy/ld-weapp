@@ -21,7 +21,7 @@ const transformers: SourceCodeTransformer[] = []
 const darkMode = isH5 ? 'class' : 'media'
 
 if (isMp) {
-  presets.push(presetApplet({ dark: darkMode, prefix: 'ld-' }))
+  presets.push(presetApplet({ dark: darkMode, prefix: 'u-' }))
   presets.push(presetRemRpx())
   transformers.push(transformerAttributify({ ignoreAttributes: ['block', 'fixed'] }))
   transformers.push(transformerApplet())

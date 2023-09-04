@@ -1,5 +1,6 @@
 {
   "extends": "@vue/tsconfig/tsconfig.json",
+  "module": "esnext",
   "compilerOptions": {
     "ignoreDeprecations": "5.0",
     "sourceMap": true,

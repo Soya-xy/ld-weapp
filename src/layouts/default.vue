@@ -1,7 +1,7 @@
 <template>
-  <view class="px-10 py-20 text-center">
+  <view u="px-10 py-20 text-center">
     <slot />
-    <view class="mx-auto mt-5 text-center text-sm opacity-25">
+    <view u="mx-auto mt-5 text-center text-sm opacity-25">
       [Default Layout]
     </view>
   </view>
